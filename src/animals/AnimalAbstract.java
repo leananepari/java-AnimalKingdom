@@ -24,4 +24,13 @@ public abstract class AnimalAbstract
   public abstract String move();
   public abstract String breath();
   public abstract String reproduce();
+
+  @Override
+  public String toString()
+  {
+    return "\nAnimals{" +
+    "name='" + name + '\'' +
+    ", year=" + year +
+    '}';
+  }
 }
