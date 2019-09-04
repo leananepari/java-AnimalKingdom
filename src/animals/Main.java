@@ -89,15 +89,27 @@ public class Main
     System.out.println("***");
 
     System.out.println("*** List alphabetically only those animals that were named in 1758 ***");
-    ArrayList<AnimalAbstract> newList = new ArrayList<AnimalAbstract>();
+    ArrayList<AnimalAbstract> byYearList = new ArrayList<AnimalAbstract>();
     myList.forEach((a) -> {
                             if (a.getYear() == 1758)
                             {
-                              newList.add(a);
+                              byYearList.add(a);
                             }
                           });
-    newList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
-    newList.forEach((a) -> System.out.println(a));
+    byYearList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+    byYearList.forEach((a) -> System.out.println(a));
+    System.out.println("***");
+
+    System.out.println("*** For the list of animals, list alphabetically those animals that are mammals ***");
+    ArrayList<AnimalAbstract> mammalList = new ArrayList<AnimalAbstract>();
+    myList.forEach((a) -> {
+                            if (a instanceof Mammal)
+                            {
+                              mammalList.add(a);
+                            }
+                          });
+    mammalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+    mammalList.forEach((a) -> System.out.println(a));
     System.out.println("***");
   }
 }
