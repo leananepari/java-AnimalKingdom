@@ -23,7 +23,7 @@ public class Bird extends AnimalAbstract
   @Override
   public String reproduce()
   {
-    return "Live birth!";
+    return "Eggs!";
   }
-  
+
 }

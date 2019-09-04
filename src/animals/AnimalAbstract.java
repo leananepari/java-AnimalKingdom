@@ -16,6 +16,16 @@ public abstract class AnimalAbstract
     this.year = year;
   }
 
+  public String getName()
+  {
+    return name;
+  }
+
+  public int getYear()
+  {
+    return year;
+  }
+
   public String eat()
   {
     return "Eating!";
@@ -30,7 +40,10 @@ public abstract class AnimalAbstract
   {
     return "\nAnimals{" +
     "name='" + name + '\'' +
-    ", year=" + year +
+    ", year=" + year + '\'' +
+    ", move=" + move() + '\'' +
+    ", breath=" + breath() + '\'' +
+    ", reproduce=" + reproduce() +
     '}';
   }
 }
